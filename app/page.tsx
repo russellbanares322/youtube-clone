@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main>Youtube</main>;
+  return <main>Youtube Clone</main>;
 }
