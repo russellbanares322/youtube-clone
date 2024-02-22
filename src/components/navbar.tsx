@@ -1,4 +1,5 @@
 import { TbMenu2 } from "react-icons/tb";
+import { BsYoutube } from "react-icons/bs";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,15 @@ const Navbar = () => {
             className="cursor-pointer hover:bg-gray rounded-full p-1"
             size={22}
           />
-          <p className="text-xs">YouTube</p>
+          <div className="flex items-center gap-[2px] relative cursor-pointer">
+            <BsYoutube className="fill-red" />
+            <p className="text-xs tracking-tighter font-semibold font-mono">
+              YouTube
+            </p>
+            <span className="absolute top-0 -right-3 text-[6px] text-zinc-400">
+              PH
+            </span>
+          </div>
         </div>
         {/* Search bar */}
         <div>
