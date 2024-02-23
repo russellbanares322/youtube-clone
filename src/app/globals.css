@@ -4,11 +4,16 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 @layer base {
   body {
     @apply bg-black text-white;
+  }
+  .page-container {
+    @apply max-w-[1325px] mx-auto;
   }
 }
 
