@@ -9,7 +9,9 @@ const ExtraButtons = () => {
         className="cursor-pointer icon-hover p-2"
         size={40}
       />
-      <span className="bg-green-700 py-1 px-3 rounded-full mx-2">R</span>
+      <span className="bg-green-700 py-1 px-3 rounded-full mx-2 cursor-pointer">
+        R
+      </span>
     </div>
   );
 };
