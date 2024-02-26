@@ -1,9 +1,9 @@
-import { sidebarItems } from "@/data/sidebar-items";
+import { firstItems } from "@/data/sidebar-items";
 
 const Sidebar = () => {
   return (
     <div className="flex flex-col gap-5 w-56 h-screen hover:overflow-y-scroll fixed pt-3">
-      {sidebarItems.map((item) => (
+      {firstItems.map((item) => (
         <p className="flex items-center gap-6 text-sm" key={item.title}>
           {item.icon} {item.title}
         </p>
