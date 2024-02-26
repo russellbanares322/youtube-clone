@@ -5,14 +5,14 @@ import { MdOutlineSubscriptions } from "react-icons/md";
 export const sidebarItems = [
   {
     title: "Home",
-    icon: <GoHomeFill />,
+    icon: <GoHomeFill size={23} />,
   },
   {
     title: "Shorts",
-    icon: <SiYoutubeshorts />,
+    icon: <SiYoutubeshorts size={23} />,
   },
   {
     title: "Subscriptions",
-    icon: <MdOutlineSubscriptions />,
+    icon: <MdOutlineSubscriptions size={23} />,
   },
 ];
