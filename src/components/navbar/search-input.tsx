@@ -4,6 +4,7 @@ import { isInputFilled } from "@/utils/isInputFilled";
 import { useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { TfiClose } from "react-icons/tfi";
+import { LiaKeyboard } from "react-icons/lia";
 
 const SearchInput = () => {
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -23,6 +24,12 @@ const SearchInput = () => {
       />
       {isSearchInputValueFilled && (
         <TfiClose className="absolute top-2 right-20" size={22} />
+      )}
+      {!isSearchInputValueFilled && (
+        <LiaKeyboard
+          className="absolute top-2 right-20 cursor-pointer"
+          size={22}
+        />
       )}
       <button className="bg-gray h-full p-2 rounded-tr-full rounded-br-full w-20 flex items-center justify-center">
         <GoSearch size={23} />
