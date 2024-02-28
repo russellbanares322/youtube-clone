@@ -1,36 +1,53 @@
 import { GoHomeFill } from "react-icons/go";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
+import { PiUserSquare } from "react-icons/pi";
+import { GrHistory } from "react-icons/gr";
+import { RiPlayList2Fill } from "react-icons/ri";
+import { BiPlay } from "react-icons/bi";
+import { LuClock4 } from "react-icons/lu";
+
+const iconSize = 20;
 
 export const firstItems = [
   {
     title: "Home",
-    icon: <GoHomeFill size={23} />,
+    icon: <GoHomeFill size={iconSize} />,
   },
   {
     title: "Shorts",
-    icon: <SiYoutubeshorts size={23} />,
+    icon: <SiYoutubeshorts size={iconSize} />,
   },
   {
     title: "Subscriptions",
-    icon: <MdOutlineSubscriptions size={23} />,
+    icon: <MdOutlineSubscriptions size={iconSize} />,
   },
 ];
 
 export const secondItems = [
   {
     title: "Your channel",
+    needsAuthentication: false,
+    icon: <PiUserSquare size={23} />,
   },
   {
     title: "History",
+    needsAuthentication: false,
+    icon: <GrHistory size={iconSize} />,
   },
   {
     title: "Playlists",
+    needsAuthentication: true,
+    icon: <RiPlayList2Fill size={iconSize} />,
   },
   {
     title: "Your videos",
+    needsAuthentication: true,
+    icon: <BiPlay className="border border-solid" size={iconSize} />,
   },
   {
     title: "Watch later",
+    needsAuthentication: true,
+    icon: <LuClock4 size={iconSize} />,
   },
 ];
