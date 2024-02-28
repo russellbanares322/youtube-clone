@@ -1,21 +1,15 @@
-import { firstItems, secondItems } from "@/data/sidebar-items";
+import { secondItems } from "@/data/sidebar-items";
+import FirstItemsDisplay from "./first-items-display";
+import SecondItemsDisplay from "./second-items-display";
 
 const Sidebar = () => {
-  const styledHr = <hr className="text-zinc-700" />;
+  const styledHr = <hr className="text-zinc-700 my-5" />;
 
   return (
-    <div className="flex flex-col gap-5 w-56 h-screen hover:overflow-y-scroll fixed pt-3">
-      {firstItems.map((item) => (
-        <p className="flex items-center gap-6 text-sm" key={item.title}>
-          {item.icon} {item.title}
-        </p>
-      ))}
+    <div className="w-56 h-screen hover:overflow-y-scroll fixed pt-3">
+      <FirstItemsDisplay />
       {styledHr}
-      {secondItems.map((item) => (
-        <p className="flex items-center gap-6 text-sm" key={item.title}>
-          {item.icon} {item.title}
-        </p>
-      ))}
+      <SecondItemsDisplay />
       {styledHr}
     </div>
   );
