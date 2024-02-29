@@ -5,7 +5,7 @@ const SecondItemsDisplay = () => {
   const isLoggedIn = true;
 
   return (
-    <div className="flex flex-col gap-5 text-[0.93rem]">
+    <div className="flex flex-col gap-4 text-[0.93rem]">
       {secondItems
         .filter((data) => {
           // For conditionally showing sidebar items depending on user's authentication
