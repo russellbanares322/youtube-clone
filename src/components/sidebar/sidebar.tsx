@@ -25,6 +25,7 @@ const Sidebar = () => {
           <ThirdItemsDisplay />
         </>
       )}
+      {styledHr}
     </div>
   );
 };
