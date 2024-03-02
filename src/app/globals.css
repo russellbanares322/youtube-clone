@@ -34,7 +34,7 @@
     @apply bg-black text-white;
   }
   .page-container {
-    @apply max-w-[1325px] mx-auto;
+    @apply max-w-[1300px] mx-auto;
   }
   .icon-hover {
     @apply hover:bg-gray rounded-full;
