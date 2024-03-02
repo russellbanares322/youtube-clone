@@ -2,6 +2,7 @@ import { secondItems } from "@/data/sidebar-items";
 import FirstItemsDisplay from "./first-items-display";
 import SecondItemsDisplay from "./second-items-display";
 import SignInBanner from "./sign-in-banner";
+import ThirdItemsDisplay from "./third-items-display";
 
 const Sidebar = () => {
   const isLoggedIn = true;
@@ -12,9 +13,18 @@ const Sidebar = () => {
       <FirstItemsDisplay />
       {styledHr}
       <SecondItemsDisplay isLoggedIn={isLoggedIn} />
-      {styledHr}
-      {!isLoggedIn && <SignInBanner />}
-      {styledHr}
+      {!isLoggedIn && (
+        <>
+          {styledHr}
+          <SignInBanner />
+        </>
+      )}
+      {isLoggedIn && (
+        <>
+          {styledHr}
+          <ThirdItemsDisplay />
+        </>
+      )}
     </div>
   );
 };
