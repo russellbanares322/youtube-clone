@@ -10,7 +10,7 @@ const SecondItemsDisplay = ({ isLoggedIn }: SecondItemsDisplayProps) => {
   return (
     <div className="flex flex-col gap-4 text-[0.93rem]">
       {isLoggedIn && (
-        <p className="flex items-center gap-3 text-base">
+        <p className="flex items-center gap-3 text-base cursor-pointer">
           You <TbChevronRight size={23} />
         </p>
       )}
