@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <main>
       <Navbar />
-      <ContentWrapper>Content</ContentWrapper>
+      <ContentWrapper>Content Data</ContentWrapper>
     </main>
   );
 };
