@@ -1,11 +1,14 @@
 import { GoHomeFill } from "react-icons/go";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
-import { PiUserSquare } from "react-icons/pi";
-import { GrHistory } from "react-icons/gr";
+import { PiUserSquare, PiMusicNote, PiNewspaper } from "react-icons/pi";
+import { GrHistory, GrGamepad } from "react-icons/gr";
 import { RiPlayList2Fill } from "react-icons/ri";
 import { BiPlay } from "react-icons/bi";
 import { LuClock4 } from "react-icons/lu";
+import { BsFire } from "react-icons/bs";
+import { GiClapperboard, GiHanger } from "react-icons/gi";
+import { IoTrophyOutline } from "react-icons/io5";
 
 const iconSize = 20;
 
@@ -49,5 +52,36 @@ export const secondItems = [
     title: "Watch later",
     needsAuthentication: true,
     icon: <LuClock4 size={iconSize} />,
+  },
+];
+
+export const fourthItems = [
+  {
+    title: "Trending",
+    icon: <BsFire size={iconSize} />,
+  },
+  {
+    title: "Music",
+    icon: <PiMusicNote size={iconSize} />,
+  },
+  {
+    title: "Movies",
+    icon: <GiClapperboard size={iconSize} />,
+  },
+  {
+    title: "Gaming",
+    icon: <GrGamepad size={iconSize} />,
+  },
+  {
+    title: "news",
+    icon: <PiNewspaper size={iconSize} />,
+  },
+  {
+    title: "Sports",
+    icon: <IoTrophyOutline size={iconSize} />,
+  },
+  {
+    title: "Fashion and Beauty",
+    icon: <GiHanger size={iconSize} />,
   },
 ];

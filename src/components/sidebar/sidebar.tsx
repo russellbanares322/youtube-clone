@@ -3,13 +3,14 @@ import FirstItemsDisplay from "./first-items-display";
 import SecondItemsDisplay from "./second-items-display";
 import SignInBanner from "./sign-in-banner";
 import ThirdItemsDisplay from "./third-items-display";
+import FourthItemsDisplay from "./fourth-items-display";
 
 const Sidebar = () => {
   const isLoggedIn = true;
   const styledHr = <hr className="text-zinc-700 my-5" />;
 
   return (
-    <div className="w-56 h-screen hover:overflow-y-scroll fixed pt-3">
+    <div className="w-56 min-h-screen h-full pb-24 hover:overflow-y-scroll fixed pt-3 duration-100 ease-in-out">
       <FirstItemsDisplay />
       {styledHr}
       <SecondItemsDisplay isLoggedIn={isLoggedIn} />
@@ -26,6 +27,7 @@ const Sidebar = () => {
         </>
       )}
       {styledHr}
+      <FourthItemsDisplay />
     </div>
   );
 };
