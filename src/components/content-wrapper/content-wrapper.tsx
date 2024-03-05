@@ -1,12 +1,16 @@
 import { TChildren } from "@/types/types";
 import { Sidebar } from "../sidebar";
+import BadgeFilter from "../navbar/badge-filter";
 
 const ContentWrapper = ({ children }: TChildren) => {
   return (
     <div className="h-full w-full pt-14">
       <div className="flex page-container py-2">
         <Sidebar />
-        <div className="ml-80 w-full h-full">{children}</div>
+        <div className="ml-80">
+          <BadgeFilter />
+          <div className="w-full h-full">{children}</div>
+        </div>
       </div>
     </div>
   );
