@@ -4,7 +4,7 @@ import SearchInput from "./search-input";
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full">
+    <nav className="w-full">
       <div className="page-container mx-auto flex justify-between items-center py-2">
         {/* Menu */}
         <Menu />

@@ -4,10 +4,10 @@ import BadgeFilter from "../navbar/badge-filter";
 
 const ContentWrapper = ({ children }: TChildren) => {
   return (
-    <div className="h-full w-full pt-14">
+    <div className="h-full w-full pt-6">
       <div className="flex page-container py-2">
         <Sidebar />
-        <div className="ml-80">
+        <div>
           <BadgeFilter />
           <div className="w-full h-full">{children}</div>
         </div>
