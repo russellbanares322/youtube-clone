@@ -31,33 +31,35 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="flex items-center max-w-[600px] w-full border border-zinc-700 rounded-full relative">
-      <input
-        ref={inputRef}
-        className="appearance-none bg-black w-full placeholder-zinc-500 text-white outline-none rounded-tl-full rounded-bl-full py-[9.5px] pl-3 pr-2 border border-gray h-full"
-        placeholder="Search"
-        onChange={onSearchInputValueChange}
-        value={searchInputValue}
-      />
-      {isSearchInputValueFilled && (
-        <TfiClose
-          onClick={clearSearchInput}
-          className="absolute top-2 right-20 cursor-pointer"
-          size={22}
+    <div className="max-w-[600px] w-full border border-zinc-700 rounded-full">
+      <div className="flex items-center relative">
+        <input
+          ref={inputRef}
+          className="appearance-none bg-black w-full placeholder-zinc-500 text-white outline-none rounded-tl-full rounded-bl-full py-[9.5px] pl-3 pr-2 border border-gray h-full"
+          placeholder="Search"
+          onChange={onSearchInputValueChange}
+          value={searchInputValue}
         />
-      )}
-      {!isSearchInputValueFilled && (
+        {isSearchInputValueFilled && (
+          <TfiClose
+            onClick={clearSearchInput}
+            className="absolute top-2 right-20 cursor-pointer"
+            size={22}
+          />
+        )}
         <LiaKeyboard
           onClick={toggleVirtualKeyboardVisibility}
-          className="absolute top-2 right-20 cursor-pointer"
+          className={`${
+            isSearchInputValueFilled ? "right-28" : "right-20"
+          } absolute top-2  cursor-pointer`}
           size={22}
         />
-      )}
-      <button className="bg-gray h-full p-2 rounded-tr-full rounded-br-full w-20 flex items-center justify-center">
-        <GoSearch size={23} />
-      </button>
+        <button className="bg-gray h-full p-2 rounded-tr-full rounded-br-full w-20 flex items-center justify-center">
+          <GoSearch size={23} />
+        </button>
+      </div>
       {showVirtualKeyboard && (
-        <div className="absolute top-0 right-0">
+        <div className="absolute bottom-0 right-0">
           <VirtualKeyboard onVirtualKeyboardChange={onVirtualKeyboardChange} />
         </div>
       )}
