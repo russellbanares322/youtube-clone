@@ -10,7 +10,7 @@ const Sidebar = () => {
   const styledHr = <hr className="text-zinc-700 my-5" />;
 
   return (
-    <div className="pb-24 hover:overflow-y-scroll duration-100 ease-in-out">
+    <div className="pb-24 hover:overflow-y-scroll duration-100 ease-in-out sticky top-0">
       <FirstItemsDisplay />
       {styledHr}
       <SecondItemsDisplay isLoggedIn={isLoggedIn} />
