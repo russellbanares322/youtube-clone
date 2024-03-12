@@ -2,12 +2,7 @@ import { ContentWrapper } from "@/components/content-wrapper";
 import { Navbar } from "@/components/navbar";
 
 const Home = () => {
-  return (
-    <main>
-      <Navbar />
-      <ContentWrapper>Content Data</ContentWrapper>
-    </main>
-  );
+  return <main></main>;
 };
 
 export default Home;

@@ -9,7 +9,7 @@ type NavProviderProps = {
 
 const NavContext = createContext();
 
-export const NavProvider = ({ children }: NavProviderProps) => {
+const NavProvider = ({ children }: NavProviderProps) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const toggleNavbarVisibility = () => {
@@ -23,4 +23,4 @@ export const NavProvider = ({ children }: NavProviderProps) => {
   );
 };
 
-export default NavContext;
+export default NavProvider;
