@@ -15,7 +15,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <title>{metadata?.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
-      <ContentWrapper>{children}</ContentWrapper>
+      <Providers>
+        <ContentWrapper>{children}</ContentWrapper>
+      </Providers>
     </>
   );
 };
