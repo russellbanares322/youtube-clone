@@ -1,6 +1,4 @@
-"use client";
-
-import { NavProvider } from "@/context/nav-provider";
+import NavProvider from "@/context/nav-context";
 
 type ProviderProps = {
   children: React.ReactNode;

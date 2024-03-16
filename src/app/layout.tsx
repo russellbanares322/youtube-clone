@@ -1,7 +1,7 @@
 import { ContentWrapper } from "@/components/content-wrapper";
 import "./globals.css";
-import Head from "next/head";
 import Providers from "./providers";
+import Head from "next/head";
 
 export const metadata = {
   title: "Create Next App",

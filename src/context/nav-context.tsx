@@ -1,13 +1,19 @@
-import { useState } from "react";
-import { createContext } from "vm";
+"use client";
+
+import { useState, createContext } from "react";
 
 type NavProviderProps = {
   children: React.ReactNode;
 };
 
-const NavContext = createContext();
+type NavContextValues = {
+  isNavExpanded: boolean;
+  toggleNavbarVisibility: () => void;
+} | null;
 
-export const NavProvider = ({ children }: NavProviderProps) => {
+const NavContext = createContext<NavContextValues>(null);
+
+const NavProvider = ({ children }: NavProviderProps) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const toggleNavbarVisibility = () => {
@@ -20,3 +26,5 @@ export const NavProvider = ({ children }: NavProviderProps) => {
     </NavContext.Provider>
   );
 };
+
+export default NavProvider;
