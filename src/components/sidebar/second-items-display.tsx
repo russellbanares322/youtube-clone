@@ -25,7 +25,10 @@ const SecondItemsDisplay = ({ isLoggedIn }: SecondItemsDisplayProps) => {
           const isItemForUserChannel = item.title === "Your channel";
           const renderUserChannelText = isLoggedIn ? "Your channel" : "You";
           return (
-            <p className="flex items-center gap-6 text-sm" key={item.title}>
+            <p
+              className="flex items-center gap-6 text-sm cursor-pointer"
+              key={item.title}
+            >
               {item.icon}{" "}
               {isItemForUserChannel ? renderUserChannelText : item.title}
             </p>
