@@ -1,3 +1,5 @@
+"use client";
+
 import NavProvider from "@/context/nav-context";
 
 type ProviderProps = {
