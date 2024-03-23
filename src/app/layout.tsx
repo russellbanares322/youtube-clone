@@ -1,7 +1,6 @@
 import { ContentWrapper } from "@/components/content-wrapper";
 import "./globals.css";
 import Providers from "./providers";
-import { Head } from "next/document";
 
 export const metadata = {
   title: "Youtube Clone",
@@ -11,14 +10,12 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
-      <Head>
+      <head>
         <title>{metadata?.title}</title>
         <meta name="description" content={metadata.description} />
-      </Head>
+      </head>
       <body>
-        <Providers>
-          <ContentWrapper>{children}</ContentWrapper>
-        </Providers>
+        <ContentWrapper>{children}</ContentWrapper>
       </body>
     </html>
   );
