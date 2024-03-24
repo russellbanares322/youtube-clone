@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, createContext } from "react";
+import { useState, createContext, useContext } from "react";
 
-type NavProviderProps = {
+type NavContextProviderProps = {
   children: React.ReactNode;
 };
 
@@ -11,9 +11,9 @@ type NavContextValues = {
   toggleNavbarVisibility: () => void;
 } | null;
 
-const NavContext = createContext<NavContextValues>(null);
+export const NavContext = createContext<NavContextValues>(null);
 
-const NavProvider = ({ children }: NavProviderProps) => {
+const NavContextProvider = ({ children }: NavContextProviderProps) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const toggleNavbarVisibility = () => {
@@ -27,4 +27,12 @@ const NavProvider = ({ children }: NavProviderProps) => {
   );
 };
 
-export default NavProvider;
+export const useNavContext = () => {
+  const context = useContext(NavContext);
+
+  if (!context) {
+    throw new Error("useNavContext must be used within ");
+  }
+  return context;
+};
+export default NavContextProvider;
