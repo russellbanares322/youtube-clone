@@ -13,7 +13,7 @@ const ExtraButtons = () => {
         />
       </Tooltip>
       <span className="bg-green-700 py-1 px-3 rounded-full mx-2 cursor-pointer">
-        R
+        U
       </span>
     </div>
   );
