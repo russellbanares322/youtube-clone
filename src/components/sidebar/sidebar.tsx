@@ -4,7 +4,6 @@ import SecondItemsDisplay from "./second-items-display";
 import SignInBanner from "./sign-in-banner";
 import ThirdItemsDisplay from "./third-items-display";
 import FourthItemsDisplay from "./fourth-items-display";
-import { useContext } from "react";
 import { useNavContext } from "@/context/nav-context";
 import { twMerge } from "tailwind-merge";
 
