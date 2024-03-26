@@ -1,4 +1,3 @@
-import { secondItems } from "@/data/sidebar-items";
 import FirstItemsDisplay from "./first-items-display";
 import SecondItemsDisplay from "./second-items-display";
 import SignInBanner from "./sign-in-banner";
