@@ -31,7 +31,7 @@ export const useNavContext = () => {
   const context = useContext(NavContext);
 
   if (!context) {
-    throw new Error("useNavContext must be used within ");
+    throw new Error("useNavContext must be used within NavContextProvider");
   }
   return context;
 };
