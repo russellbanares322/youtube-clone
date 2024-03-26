@@ -16,27 +16,36 @@ const Sidebar = () => {
   return (
     <div
       className={twMerge(
-        isNavExpanded ? "w-auto" : "w-16",
-        "pb-24 hover:overflow-y-scroll duration-100 ease-in-out sticky top-0"
+        isNavExpanded ? "w-auto hover:overflow-y-scroll" : "w-16",
+        "pb-24  duration-100 ease-in-out sticky top-0"
       )}
     >
       <FirstItemsDisplay />
-      {styledHr}
-      <SecondItemsDisplay isLoggedIn={isLoggedIn} />
-      {!isLoggedIn && (
+      {isNavExpanded && (
+        <>
+          {styledHr}
+          <SecondItemsDisplay isLoggedIn={isLoggedIn} />
+        </>
+      )}
+
+      {isNavExpanded && !isLoggedIn && (
         <>
           {styledHr}
           <SignInBanner />
         </>
       )}
-      {isLoggedIn && (
+      {isNavExpanded && isLoggedIn && (
         <>
           {styledHr}
           <ThirdItemsDisplay />
         </>
       )}
-      {styledHr}
-      <FourthItemsDisplay />
+      {isNavExpanded && (
+        <>
+          {styledHr}
+          <FourthItemsDisplay />
+        </>
+      )}
     </div>
   );
 };
