@@ -9,7 +9,7 @@ import { useNavContext } from "@/context/nav-context";
 import { twMerge } from "tailwind-merge";
 
 const Sidebar = () => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   const styledHr = <hr className="text-zinc-700 my-5" />;
   const { isNavExpanded } = useNavContext();
 
