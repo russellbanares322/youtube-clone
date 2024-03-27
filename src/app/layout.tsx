@@ -2,6 +2,7 @@ import { ContentWrapper } from "@/components/content-wrapper";
 import "./globals.css";
 import Providers from "./providers";
 import Head from "next/head";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
   title: "Youtube Clone",
@@ -10,17 +11,19 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html>
-      <Head>
-        <title>{metadata?.title}</title>
-        <meta name="description" content={metadata.description} />
-      </Head>
-      <body>
-        <Providers>
-          <ContentWrapper>{children}</ContentWrapper>
-        </Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html>
+        <Head>
+          <title>{metadata?.title}</title>
+          <meta name="description" content={metadata.description} />
+        </Head>
+        <body>
+          <Providers>
+            <ContentWrapper>{children}</ContentWrapper>
+          </Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 };
 
