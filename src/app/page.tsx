@@ -1,8 +1,7 @@
-import { ContentWrapper } from "@/components/content-wrapper";
-import { Navbar } from "@/components/navbar";
+import React from "react";
 
-const Home = () => {
-  return <main></main>;
+const Page = () => {
+  return <div>Page</div>;
 };
 
-export default Home;
+export default Page;
