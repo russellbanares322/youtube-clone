@@ -9,7 +9,7 @@ const ContentWrapper = ({ children }: TChildren) => {
       <Navbar />
       <div className="h-full w-full pt-6">
         <div className="page-container py-2 mt-12 flex gap-7">
-          <div className="flex-1">
+          <div>
             <Sidebar />
           </div>
           <div className="flex-[8]">
