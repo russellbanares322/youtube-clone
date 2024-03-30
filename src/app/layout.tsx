@@ -1,7 +1,6 @@
 import { ContentWrapper } from "@/components/content-wrapper";
 import "./globals.css";
 import Providers from "./providers";
-import Head from "next/head";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
@@ -13,10 +12,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ClerkProvider>
       <html>
-        <Head>
+        <head>
           <title>{metadata?.title}</title>
           <meta name="description" content={metadata.description} />
-        </Head>
+        </head>
         <body>
           <Providers>
             <ContentWrapper>{children}</ContentWrapper>
