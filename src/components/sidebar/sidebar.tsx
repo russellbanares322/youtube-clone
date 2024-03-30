@@ -7,9 +7,10 @@ import ThirdItemsDisplay from "./third-items-display";
 import FourthItemsDisplay from "./fourth-items-display";
 import { useNavContext } from "@/context/nav-context";
 import { twMerge } from "tailwind-merge";
+import { useUser } from "@clerk/nextjs";
 
 const Sidebar = () => {
-  const isLoggedIn = false;
+  const { isSignedIn } = useUser();
   const styledHr = <hr className="text-zinc-700 my-5" />;
   const { isNavExpanded } = useNavContext();
 
@@ -24,17 +25,17 @@ const Sidebar = () => {
       {isNavExpanded && (
         <>
           {styledHr}
-          <SecondItemsDisplay isLoggedIn={isLoggedIn} />
+          <SecondItemsDisplay />
         </>
       )}
 
-      {isNavExpanded && !isLoggedIn && (
+      {isNavExpanded && !isSignedIn && (
         <>
           {styledHr}
           <SignInBanner />
         </>
       )}
-      {isNavExpanded && isLoggedIn && (
+      {isNavExpanded && isSignedIn && (
         <>
           {styledHr}
           <ThirdItemsDisplay />

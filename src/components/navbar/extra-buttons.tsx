@@ -1,14 +1,17 @@
+"use client";
+
 import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import Tooltip from "../tooltip/tooltip";
 import { LuUserCircle2 } from "react-icons/lu";
 import { CgMoreVerticalAlt } from "react-icons/cg";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 const ExtraButtons = () => {
+  const { isSignedIn } = useUser();
   return (
     <>
-      <SignedIn>
+      {isSignedIn && (
         <div className="flex items-center gap-2">
           <RiVideoAddLine className="cursor-pointer icon-hover p-2" size={40} />
           <Tooltip title="Notification">
@@ -17,13 +20,11 @@ const ExtraButtons = () => {
               size={40}
             />
           </Tooltip>
-          <span className="bg-green-700 py-1 px-3 rounded-full mx-2 cursor-pointer">
-            U
-          </span>
+          <UserButton afterSignOutUrl="/" />
         </div>
-      </SignedIn>
-      <UserButton />
-      <SignedOut>
+      )}
+
+      {!isSignedIn && (
         <div className="flex items-center justify-center gap-4">
           <Tooltip title="Settings">
             <CgMoreVerticalAlt className="cursor-pointer" size={21} />
@@ -35,7 +36,7 @@ const ExtraButtons = () => {
             </button>
           </SignInButton>
         </div>
-      </SignedOut>
+      )}
     </>
   );
 };

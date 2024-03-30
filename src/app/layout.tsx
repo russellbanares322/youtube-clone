@@ -10,7 +10,7 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ClerkProvider>
+    <ClerkProvider afterSignInUrl="/">
       <html>
         <head>
           <title>{metadata?.title}</title>
