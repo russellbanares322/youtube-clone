@@ -25,7 +25,7 @@ const Tooltip = ({ children, title }: TooltipProps) => {
       </div>
       <p
         className={`absolute top-12 -right-6 bg-light-gray text-white rounded-sm p-2 text-xs ${
-          !showTooltip && "scale-0"
+          !showTooltip ? "hidden" : "block"
         } duration-150 ease-in-out`}
       >
         {title}
