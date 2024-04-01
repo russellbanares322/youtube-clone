@@ -1,11 +1,16 @@
 import { fourthItems } from "@/data/sidebar-items";
+import { isSidebarItemActive } from "@/utils/isSidebarItemActive";
+import { twMerge } from "tailwind-merge";
 
 const FourthItemsDisplay = () => {
   return (
-    <div className="flex flex-col gap-4 text-[0.93rem]">
+    <div className="flex flex-col text-[0.93rem]">
       {fourthItems.map((item) => (
         <p
-          className="flex items-center gap-6 text-sm cursor-pointer"
+          className={twMerge(
+            isSidebarItemActive(item.pathName) ? "active-sidebar-item" : "",
+            "sidebar-item gap-6"
+          )}
           key={item.title}
         >
           {item.icon} {item.title}

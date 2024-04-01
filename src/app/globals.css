@@ -29,11 +29,19 @@
   }
 
   .page-container {
-    @apply max-w-[1875px] mx-auto;
+    @apply max-w-[1900px] mx-auto;
   }
 
   .icon-hover {
     @apply hover:bg-gray rounded-full;
+  }
+
+  .sidebar-item {
+    @apply hover:bg-light-gray/65 flex items-center cursor-pointer rounded-lg px-3 py-2;
+  }
+
+  .active-sidebar-item {
+    @apply bg-light-gray/30 flex items-center cursor-pointer rounded-lg px-3 py-2;
   }
 }
 
