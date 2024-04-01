@@ -68,7 +68,7 @@ const SearchInput = () => {
           </div>
         )}
       </div>
-      <MdMic size={25} />
+      <MdMic className="cursor-pointer bg-gray rounded-full p-2" size={40} />
     </div>
   );
 };
