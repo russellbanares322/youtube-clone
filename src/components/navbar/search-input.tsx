@@ -32,7 +32,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="flex items-center gap-3 max-w-[600px] w-full">
+    <div className="flex items-center gap-3 max-w-[600px] w-full h-full">
       <div className="w-full border border-zinc-700 rounded-full">
         <div className="flex items-center relative">
           <input
