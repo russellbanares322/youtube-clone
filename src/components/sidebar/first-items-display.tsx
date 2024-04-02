@@ -15,7 +15,9 @@ const FirstItemsDisplay = () => {
             isNavExpanded
               ? "flex-row gap-6 text-[0.93rem]"
               : "flex-col gap-1 text-[0.60rem]",
-            isSidebarItemActive(item.pathName) ? "active-sidebar-item" : "",
+            isNavExpanded && isSidebarItemActive(item.pathName)
+              ? "active-sidebar-item"
+              : "",
             "sidebar-item"
           )}
           key={item.title}
