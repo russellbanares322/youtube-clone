@@ -1,5 +1,3 @@
-"use client";
-
 import { useNavContext } from "@/context/nav-context";
 import { firstItems } from "@/data/sidebar-items";
 import { isSidebarItemActive } from "@/utils/isSidebarItemActive";

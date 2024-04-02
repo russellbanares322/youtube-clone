@@ -29,7 +29,7 @@
   }
 
   .page-container {
-    @apply max-w-[1900px] mx-auto;
+    @apply max-w-[1875px] mx-auto;
   }
 
   .icon-hover {

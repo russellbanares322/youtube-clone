@@ -1,3 +1,5 @@
+"use client"
+
 import { routesPath } from "@/data/routesPath";
 import { TRoutesPath } from "@/types/types";
 
