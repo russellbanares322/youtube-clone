@@ -3,9 +3,11 @@ import { TbChevronRight } from "react-icons/tb";
 import { useUser } from "@clerk/nextjs";
 import { twMerge } from "tailwind-merge";
 import { isSidebarItemActive } from "@/utils/isSidebarItemActive";
+import { useNavContext } from "@/context/nav-context";
 
 const SecondItemsDisplay = () => {
   const { isSignedIn } = useUser();
+  const { isNavExpanded } = useNavContext();
 
   return (
     <div className="flex flex-col text-[0.93rem]">
@@ -27,7 +29,9 @@ const SecondItemsDisplay = () => {
           return (
             <p
               className={twMerge(
-                isSidebarItemActive(item.pathName) ? "active-sidebar-item" : "",
+                isNavExpanded && isSidebarItemActive(item.pathName)
+                  ? "active-sidebar-item"
+                  : "",
                 "sidebar-item gap-6"
               )}
               key={item.title}
