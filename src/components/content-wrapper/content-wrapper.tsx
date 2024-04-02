@@ -5,7 +5,7 @@ import { Navbar } from "../navbar";
 
 const ContentWrapper = ({ children }: TChildren) => {
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <div className="h-full w-full pt-6">
         <div className="page-container py-2 mt-12 flex gap-7">
@@ -18,7 +18,7 @@ const ContentWrapper = ({ children }: TChildren) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
