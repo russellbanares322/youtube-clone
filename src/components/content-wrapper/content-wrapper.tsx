@@ -12,7 +12,7 @@ const ContentWrapper = ({ children }: TChildren) => {
           <div>
             <Sidebar />
           </div>
-          <div className="flex-[8]">
+          <div className="w-full">
             <BadgeFilter />
             <div className="w-full h-full">{children}</div>
           </div>

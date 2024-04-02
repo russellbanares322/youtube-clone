@@ -17,8 +17,8 @@ const Sidebar = () => {
   return (
     <div
       className={twMerge(
-        isNavExpanded ? "w-auto hover:overflow-y-scroll" : "w-16",
-        "pb-24  duration-100 ease-in-out sticky top-0"
+        isNavExpanded ? "w-auto" : "w-16",
+        "pb-24 duration-100 ease-in-out sticky top-0 hover:overflow-y-scroll min-h-screen h-full"
       )}
     >
       <FirstItemsDisplay />
