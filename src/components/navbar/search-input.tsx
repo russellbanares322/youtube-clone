@@ -61,11 +61,7 @@ const SearchInput = () => {
           </button>
         </div>
         {showVirtualKeyboard && (
-          <div className="absolute bottom-0 right-0">
-            <VirtualKeyboard
-              onVirtualKeyboardChange={onVirtualKeyboardChange}
-            />
-          </div>
+          <VirtualKeyboard onVirtualKeyboardChange={onVirtualKeyboardChange} />
         )}
       </div>
       <MdMic className="cursor-pointer bg-gray rounded-full p-2" size={40} />

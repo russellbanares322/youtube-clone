@@ -6,7 +6,11 @@ type VirtualKeyboardProps = {
 };
 
 const VirtualKeyboard = ({ onVirtualKeyboardChange }: VirtualKeyboardProps) => {
-  return <Keyboard onChange={onVirtualKeyboardChange} />;
+  return (
+    <div className="absolute bottom-0 right-0">
+      <Keyboard onChange={onVirtualKeyboardChange} />
+    </div>
+  );
 };
 
 export default VirtualKeyboard;
