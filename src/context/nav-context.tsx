@@ -14,7 +14,7 @@ type NavContextValues = {
 export const NavContext = createContext<NavContextValues>(null);
 
 export const NavContextProvider = ({ children }: NavContextProviderProps) => {
-  const [isNavExpanded, setIsNavExpanded] = useState(true);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const toggleNavbarVisibility = () => {
     setIsNavExpanded(!isNavExpanded);
