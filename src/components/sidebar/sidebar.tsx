@@ -14,6 +14,7 @@ const Sidebar = () => {
   const styledHr = <hr className="text-zinc-700 my-5" />;
   const { isNavExpanded } = useNavContext();
 
+  // Adjust sidebar's width
   return (
     <div
       className={twMerge(
