@@ -1,4 +1,6 @@
-const Toast = () => {
+import { ToastProps } from "./types";
+
+const Toast = ({ open, closable, title, description, type }: ToastProps) => {
   return <div>Toast</div>;
 };
 
