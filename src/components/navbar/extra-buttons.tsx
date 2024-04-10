@@ -13,7 +13,12 @@ const ExtraButtons = () => {
     <>
       {isSignedIn && (
         <div className="flex items-center gap-2">
-          <RiVideoAddLine className="cursor-pointer icon-hover p-2" size={40} />
+          <Tooltip title="Create">
+            <RiVideoAddLine
+              className="cursor-pointer icon-hover p-2"
+              size={40}
+            />
+          </Tooltip>
           <Tooltip title="Notification">
             <IoMdNotificationsOutline
               className="cursor-pointer icon-hover p-2"
