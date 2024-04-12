@@ -10,7 +10,10 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ClerkProvider afterSignInUrl="/">
+    <ClerkProvider
+      afterSignInUrl="/"
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    >
       <html>
         <head>
           <title>{metadata?.title}</title>
