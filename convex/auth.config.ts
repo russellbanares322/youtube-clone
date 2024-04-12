@@ -1,7 +1,7 @@
 export default {
     providers: [
       {
-        domain: "https://your-issuer-url.clerk.accounts.dev/",
+        domain: "https://picked-walleye-78.clerk.accounts.dev",
         applicationID: "convex",
       },
     ]
