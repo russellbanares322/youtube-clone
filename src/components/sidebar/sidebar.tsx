@@ -15,6 +15,7 @@ const Sidebar = () => {
   const { isNavExpanded } = useNavContext();
 
   // Adjust sidebar's width
+  // Implement auto adjusting of sidebar
   return (
     <div
       className={twMerge(
