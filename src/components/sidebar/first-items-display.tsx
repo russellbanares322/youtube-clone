@@ -1,6 +1,7 @@
 import { useNavContext } from "@/context/nav-context";
 import { firstItems } from "@/data/sidebar-items";
 import { isSidebarItemActive } from "@/utils/isSidebarItemActive";
+import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -10,7 +11,7 @@ const FirstItemsDisplay = () => {
   return (
     <div className={twMerge(isNavExpanded ? "" : "gap-6", "flex flex-col")}>
       {firstItems.map((item) => (
-        <p
+        <Link
           className={twMerge(
             isNavExpanded
               ? "flex-row gap-6 text-[0.93rem]"
@@ -21,9 +22,10 @@ const FirstItemsDisplay = () => {
             "sidebar-item"
           )}
           key={item.title}
+          href={item.path}
         >
           {item.icon} {item.title}
-        </p>
+        </Link>
       ))}
     </div>
   );
