@@ -9,6 +9,7 @@ import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 const ExtraButtons = () => {
   const { isSignedIn } = useUser();
+
   return (
     <>
       {isSignedIn && (
